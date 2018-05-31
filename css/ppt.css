@@ -1,0 +1,120 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.silder_list{
+	width: 100%;
+	height: 100%;
+}
+
+.silder_list .silder{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.silder_list .silder:nth-of-type(1){
+	background-image: url('../images/bg-1.jpg');
+}
+.silder_list .silder:nth-of-type(2){
+	display: none;
+	background-image: url('../images/bg-2.jpg');
+}
+.silder_list .silder:nth-of-type(3){
+	display: none;
+	background-image: url('../images/bg-3.jpg');
+}
+
+.silder .content-left{
+	width: 40%;
+	float: left;
+	color: #fff;
+}
+
+.silder .content-left p{
+	margin-top: 20px;
+	width: 100%;
+	/*多行打点*/
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+
+}
+.silder .content-right{
+	width: 40%;
+	float: right;
+}
+.silder:nth-of-type(2) .content-right{
+	width: 0%;
+}
+.silder:nth-of-type(3) .content-right{
+	width: 0%;
+}
+.silder .content-right img{
+	width: 100%;
+}
+
+.silder_btn{
+	width: 100%
+}
+.silder_btn span{
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	display: block;
+	width: 30px;
+	height: 40px;
+}
+.silder_btn .left_btn{
+	background-image: url('../images/left-arrow.png');
+	left: 50px;
+}
+.silder_btn .right_btn{
+	background-image: url('../images/right-arrow.png');
+	right: 50px;
+}
+
+.silder_point{
+	position: absolute;
+	bottom: 100px;
+	width: 100%;
+	/*text-align: center;*/
+}
+.silder_point ul{
+	position: absolute;
+	left: 50%;
+	display: inline-block;
+	transform: translateX(-50%); 
+}
+.silder_point ul .active{
+	background-color: #fff;
+}
+.silder_point ul li{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background-color: #ccc;
+}
+
+.silder_point li:nth-of-type(3){
+	margin-right: 0;
+}
